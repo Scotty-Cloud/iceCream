@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream Shop</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <link rel="stylesheet" href="menu.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <main>
@@ -18,8 +20,32 @@
                 <input type="radio" name="cupRadio" id="cupOption" />
                 <label for="cupOption">Cup</label>
               </fieldset>
-
-              
+              <fieldset>
+                <legend>Ice Cream Toppings</legend>
+                    <input type="checkbox" id="sprinkleBox">
+                    <label for="sprinkleBox">Sprinkles ($0.50)</label>
+                    <input type="checkbox" id="whippedcreamBox">
+                    <label for="whippedcreamBox">Whipped Cream ($0.25)</label>
+                    <input type="checkbox" id="hotfudgeBox">
+                    <label for="hotfudgeBox">Hot Fudge ($1.25)</label>
+                    <input type="checkbox" id="cherryBox">
+                    <label for="cherryBox">Cherry ($0.25)</label>                
+              </fieldset>
+              <button type="button" id="orderSubmit">Submit Order</button>
+              <table class="totalPrice">
+                <tr>
+                    <td>Base Price:</td>
+                    <td id="basePriceTotal">$00.00</td>
+                </tr>
+                <tr>
+                    <td>Tax:</td>
+                    <td id="taxTotal">$00.00</td>
+                </tr>
+                <tfoot>
+                    <td>Total Due:</td>
+                    <td id="entireTotalDue">$00.00</td>
+                </tfoot>
+              </table>
         </form>
     </main>
 </body>
